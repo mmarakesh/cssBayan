@@ -1,0 +1,107 @@
+body {
+    background-color: #EEEEEE;
+}
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+}
+.box {
+    background-color: #4D455D;
+}
+.label {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+}
+.icon {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-size: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.item:hover .icon {
+    transform: rotate(45deg);
+}
+.box:hover .icon {
+    display: block;
+}
+.item:active .icon {
+    transform: rotate(45deg);
+}
+input {
+    appearance: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: contents;
+}
+.memes {
+    display: none;
+    margin: 0px 80px;
+}
+.selected {
+    display: block;
+}
+img {
+    animation-name: img-animate;
+    animation-duration: 0.9s;
+}
+@keyframes img-animate {
+    0% {
+        width: 250px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+.input:hover ~ .memes {
+    display: block;
+}
+.input:checked ~ .header {
+    background-color: #eaba54;
+    transition-duration: 1.5s;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #2C3333;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #FFF1DC;
+}
+@media all and (max-width: 820px) {
+    h1, h2 {
+        font-family: 'Playfair Display', serif;
+    }
+}
+@media all and (max-width: 320px) {
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        text-align: center;
+    }
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+    }
+    .box {
+        max-width: 500px;
+        margin: 0;
+    }
+    img {
+        margin: 0px 5px;
+        width: 150px;
+    }
+    @keyframes img-animate {
+        0% {
+            width: 100px;
+        }
+    
+        100% {
+            width: 150px;
+        }
+}
+}
