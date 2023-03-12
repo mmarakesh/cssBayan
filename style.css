@@ -63,6 +63,7 @@ img {
 .input:checked ~ .header {
     background-color: #eaba54;
     transition-duration: 1.5s;
+    width: 70%;
 }
 h1 {
     font-family: 'Roboto', sans-serif;
